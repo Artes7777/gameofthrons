@@ -1,0 +1,34 @@
+{
+  "heroes" : [
+    { "name" : "Уймар Ройс",
+      "discription" : "Разведчик ночного дозора",
+      "causeOfDeath" : "Убийство",
+      "killer" : "Белые ходоки",
+      "murderWeapon" : "Меч"
+    },
+    { "name" : "Джон Аррен",
+      "discription" : "Лорд Долины",
+      "causeOfDeath" : "Отравлен",
+      "killer" : "Лиза Аррен",
+      "murderWeapon" : "Яд"
+    },
+    { "name" : "Дейнерис Таргариен",
+      "discription" : "Матерь Драконов",
+      "causeOfDeath" : "Убийство",
+      "killer" : "Джон Сноу",
+      "murderWeapon" : "Меч" 
+    },
+    { "name" : "Роберт Баратеон",
+      "discription" : "Король семи королевств",
+      "causeOfDeath" : "Несчастный случай",
+      "killer" : "Кабан",
+      "murderWeapon" : "Зубы"
+    },
+    { "name" : "Эддард Старк",
+      "discription" : "Хранитель Севера",
+      "causeOfDeath" : "Казнь",
+      "killer" : "Иллиан Пейн",
+      "murderWeapon" : "Топор"
+    }
+  ]
+}
