@@ -46,6 +46,7 @@ const ListOfDeth = () => {
       actions: 'Действие',
     },
     body : {
+      emptyDataSourceMessage: 'Добавте персонажа',
       editRow: {
         deleteText: 'Удалить этого персонажа?'
       },
@@ -87,19 +88,15 @@ const ListOfDeth = () => {
       editable={{
         onRowAdd: (newData) =>
         new Promise((resolve) => {
-          setTimeout(() => {
-            resolve();
             setState((prevState) => {
               const heroes = [...prevState.heroes];
               heroes.push(newData);
               return { ...prevState, heroes };
             });
-          }, 600);
+            resolve();
         }),
         onRowUpdate: (newData, oldData) =>
           new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
               if (oldData) {
                 setState((prevState) => {
                   const heroes = [...prevState.heroes];
@@ -107,18 +104,16 @@ const ListOfDeth = () => {
                   return { ...prevState, heroes };
                 });
               }
-            }, 600);
+              resolve();
           }),
         onRowDelete: (oldData) =>
           new Promise((resolve) => {
-            setTimeout(() => {
-              resolve();
               setState((prevState) => {
                 const heroes = [...prevState.heroes];
                 heroes.splice(heroes.indexOf(oldData), 1);
                 return { ...prevState, heroes };
               });
-            }, 600);
+              resolve();
           }),
       }}
     />
