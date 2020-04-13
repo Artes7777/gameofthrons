@@ -41,6 +41,32 @@ const ListOfDeth = () => {
     ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />)
   };
 
+  const localization = {
+    header: {
+      actions: 'Действие',
+    },
+    body : {
+      editRow: {
+        deleteText: 'Удалить этого персонажа?'
+      },
+      editTooltip: 'Исправить',
+      addTooltip: 'Добавить',
+      deleteTooltip: 'Удалить'
+    },
+    toolbar: {
+      searchTooltip: 'Поиск',
+      searchPlaceholder: 'Поиск'
+    },
+    pagination: {
+      labelRowsSelect: 'персонажей',
+      firstTooltip: 'Первая страница',
+      lastTooltip: 'Последняя страница',
+      previousTooltip: 'Предыдущая страница',
+      nextTooltip: 'Следующая страница',
+      labelDisplayedRows: '{from}-{to} из {count}'
+    }
+  }
+
   const [state, setState] = useState(data);
   const [stateColums] = useState( {columns: [
     { title: 'Имя персонажа', field: 'name' },
@@ -50,12 +76,11 @@ const ListOfDeth = () => {
     { title: 'Орудие убийства', field: 'murderWeapon'}
   ] })
 
-  console.log(state);
-
   return (
     <div>
       <MaterialTable
       icons = {tableIcons}
+      localization={localization}
       title="Список погибших героев игры престолов"
       columns={stateColums.columns}
       data={state.heroes}
